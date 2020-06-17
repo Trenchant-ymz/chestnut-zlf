@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+
+<html>
+
+  <head>
+
+    <meta charset="utf-8">
+
+    <title>交大校园码</title>
+
+<style type="text/css">  
+
+body {
+
+background-image: url("zlf_final.png");
+background-size:cover;
+background-repeat:no-repeat;
+
+}
+ 
+</style>
+
+    </head>
+
+
+<body> 
+　
+	
+<div id="time" style="left:55px;position:absolute;top:500px"></div>
+
+<div id="second" style="left:400px;position:absolute;top:500px"></div>
+	
+	
+<script type="text/javascript">
+ 
+function time(){
+var vWeek,vWeek_s,vDay;
+
+var date =  new Date();
+
+month = date.getMonth() + 1;
+
+day = date.getDate();
+if(day<10){
+       day= '0'+day;
+}
+
+hours = date.getHours();
+if(hours<10){
+       hours= '0'+hours;
+}
+
+minutes = date.getMinutes();
+if(minutes<10){
+       minutes= '0'+minutes;
+}
+seconds = date.getSeconds();
+if(seconds<10){
+       seconds= '0'+seconds;
+}
+vWeek_s = date.getDay();
+
+document.getElementById("time").innerHTML =  "0"+month + "月" + day + "日" ;
+document.getElementById("second").innerHTML= hours + ":" + minutes +":" + seconds  ;
+
+};
+
+document.getElementById("time").style.fontSize="4.0rem";
+document.getElementById("time").style.fontWeight="bold";
+
+document.getElementById("second").style.fontSize="5rem";
+document.getElementById("second").style.fontWeight="bold";
+
+setInterval("time()",1000);
+
+</script>
+	</body>
+  </html>
+
