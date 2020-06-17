@@ -15,7 +15,6 @@ body {
 background-image: url("zlf_final.png");
 background-size:cover;
 background-repeat:no-repeat;
-font-family:Arial;
 }
  
 </style>
@@ -67,9 +66,11 @@ document.getElementById("second").innerHTML= hours + ":" + minutes +":" + second
 
 document.getElementById("time").style.fontSize="4.0rem";
 document.getElementById("time").style.fontWeight="bold";
+document.getElementById("time").style.fontFamily="Arial";
 
 document.getElementById("second").style.fontSize="5rem";
 document.getElementById("second").style.fontWeight="bold";
+document.getElementById("second").style.fontFamily="Arial";
 
 setInterval("time()",1000);
 
